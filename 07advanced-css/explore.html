@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>The Chronicles of Ithmanu: Home</title>        
+        <meta charset="UTF-8">
+        <meta name="description" content="Learn about Laila Ashton's Debut Book series, The Chronicles of Ithmanu, a Sci-Fi/Fantasy Epic.">
+        <meta name="author" content="Laila Ashton">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="ithmanu.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        
+    </head>
+    <body>
+<!--Beginning of Header-->
+        <header>
+            <img src="images/logo.png" alt="site logo" width="100" height="74">
+        <div>
+            <h1>The Chronicles of Ithmanu</h1>
+            <p>By Laila Ashton</p>
+        </div>
+        </header>
+<!--Beginning of Navigation-->
+<nav>
+    <ul >
+        <li ><a href="index.html">Home</a></li>
+        <li class="active"><a href="explore.html">Explore Ithmanu</a></li>
+        <li ><a href="art.html">Art</a></li>
+        <li ><a href="aboutauthor.html">About the Author</a></li>
+        <li ><a href="contact.html">Contact the Author</a></li>
+    </ul>
+</nav>
+<!--Beginning of Main Body-->
+        <main>
+            <h1>Explore Ithmanu</h1>
+            <div class="photoGallery"> 
+                <div class="map"><img src="images2/image1.webp" alt="Image 1" style="display: block;"></div>
+                <div class="map"><img src="images2/image2.webp" alt="Image 2" style="display: none;"></div>
+                <div class="map"><img src="images2/image3.webp" alt="Image 3" style="display: none;"></div>
+            </div>
+            <script>
+                let whichPhoto = 0;
+                const photoList = document.querySelectorAll('.photoGallery img');
+        
+                function setAllPhotosToHidden(){
+                    for (let i = 0; i < photoList.length; i += 1) {
+                        photoList[i].style.display = 'none';
+                    }
+                }
+                function nextPhoto() {
+                    whichPhoto++;
+                    //wraps back to first photo if needed
+                    if (whichPhoto >= photoList.length) {
+                        whichPhoto = 0;
+                    }
+                    setAllPhotosToHidden();
+                    //sets a specific (selected) photo to be shown
+                    photoList[whichPhoto ].style.display = 'block';
+                }
+
+                function previousPhoto() {
+                    whichPhoto--;
+                  setAllPhotosToHidden();
+                    if (whichPhoto <= -1) {
+                        whichPhoto = 2;
+                    }
+                    photoList[whichPhoto ].style.display = 'block';
+                }
+            </script>
+            <div class="mapbuttons">
+                <button type="button" onclick="previousPhoto()">Previous Map</button>
+                <button type="button" onclick="nextPhoto()">Next Map</button>
+            </div>
+            <ol>
+                <li><h3><a href="auptha.html">Auptha</a></h3></li>
+                <li><h3><a href="erith.html">Erith</a></h3></li>
+                <li><h3><a href="ishu.html">Ishu</a></h3></li>
+                <li><h3><a href="onan.html">Onan</a></h3></li>
+                <li><h3><a href="ura.html">Ura</a></h3></li>
+            </ol>
+        </main>
+<!--Beginning of Footer-->
+        <footer>
+            <p>&copy; 2023 &bull; Laila Ashton &bull; The Chronicles of Ithmanu &bull; <a href="mailto:laila.en.ashton@outlook.com">Email Us</a></p>
+        </footer>
+    </body>
+</html>

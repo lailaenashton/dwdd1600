@@ -152,7 +152,7 @@ table.our-activities th {
 }
 table.our-activities td {
     color: #54691f;
-    padding: .4 rem 2vw;
+    padding: .4rem 2vw;
 }
 table.our-activities tr:nth-child(odd) {
     background-color: #f7f7f7;

@@ -1,0 +1,237 @@
+/*prevents probs with diff browsers*/
+*{box-sizing: border-box;}
+/*overall settings*/
+body {
+    font-family: 'Crimson Text', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+}
+
+/*colors
+brown- #65403a
+grey blue- #1b1c27
+light blue- #9ec1d7
+grey- #eff1ee
+blue- #18465a
+light brown - #ece0de 
+lighter grey blue - #33364e
+lightest blue - #bdd9eb
+*/
+
+/*header stuff*/
+header {
+    background-color: #18465a;
+    padding: 1rem 2%;
+    display: flex;
+    align-items: flex-end;
+}
+header h1 {
+    color: #eff1ee;
+    margin: 0;
+    letter-spacing: 2px;
+}
+header p {
+    margin: 0;
+    color: #eff1ee;
+    letter-spacing: 1px;
+}
+header div {
+    padding-left: 2vw;
+}
+
+/*nav stuff*/
+@media only screen and (max-width: 600px) {
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #18465a;
+    }
+    nav ul li a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #eff1ee;
+        font-weight: 600;
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: solid 1px #eff1ee;
+    }
+    nav li.active a {
+        background-color: #eff1ee;
+        color: #18465a;
+        background-image: linear-gradient(to top, #eff1ee, #9ec1d7);
+        font-weight: 700;
+    }
+}
+@media only screen and (min-width: 601px) {
+    nav {
+        background-color: #18465a;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0 2%;
+        margin: 0;
+        display: flex;
+    }
+    nav ul li a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #eff1ee;
+        font-weight: 600;
+        display: block;
+        padding: 1rem;
+    }
+    nav li.active a {
+        background-color: #eff1ee;
+        color: #18465a;
+        background-image: linear-gradient(to top, #eff1ee, #9ec1d7);
+        font-weight: 700;
+    }
+    nav a:hover {
+        color: #9ec1d7;
+    }
+}
+
+/*main body stuff*/
+main {
+    padding: 1rem;
+    background-color: #eff1ee;
+    padding-bottom: 4rem;
+    background-image: linear-gradient(to bottom, #eff1ee, #9ec1d7);
+}
+main h1 {
+    color: #65403a;
+}
+main h2 {
+    color: #9ec1d7;
+    margin: 0;
+}
+main p {
+    color: #18465a;
+    margin: 1rem 0;
+}
+main h3 {
+    font-weight: 500;
+    color: #65403a;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+main p.fineprint {
+    font-size: .8rem;
+}
+/*packages stuff here*/
+div.package {
+    display: flex;
+    border: 2px solid #18465a;
+    margin: 1rem;
+    background-color: #eff1ee;
+}
+div.package article {
+    margin: 1rem;
+}
+div.package figure {
+    margin: 1rem;
+}
+/*gallery stuff here*/
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery figure {
+    margin: 2rem .3rem;
+    display: block;
+    position: relative;
+}
+.gallery figcaption {
+    text-align: center;
+    font-size: .9rem;
+    color: #18465a;
+    position: absolute;
+}
+
+/*hero image stuff*/
+.hero img {
+    border: 3px solid #18465a; 
+    width: 100%;
+    height: auto;
+}
+.hero {
+    float: right;
+    margin: 0 0 0 1rem;
+    width: 40%;
+    height: auto;
+}
+.hero figcaption {
+    text-align: center;
+    font-size: .8rem;
+    color: #18465a;
+    padding-bottom: .4rem;
+}
+/*form stuff*/
+.myForm fieldset {
+    border: 1px dashed #18465a;
+    margin: 1rem;
+    border-radius: 10px;
+    color: #18465a;
+}
+.myForm legend {
+    color: #65403a;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.myForm label {
+    margin: .1rem;
+}
+.myForm label, .myForm select, .myForm [type=text], .myForm [type=tel], .myForm [type=email], .myForm textarea {
+    display: block;
+}
+.myForm [type=text], .myForm [type=tel], .myForm [type=email], .myForm select, .myForm textarea {
+    border: 1px solid #33364e;
+    padding: .2rem;
+    width: 300px;
+    border-radius: 5px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 300;
+    background-color: #ece0de;
+    font-size: .9rem;
+}
+.myForm :required {
+    background-color: #bdd9eb;
+}
+.myForm textarea {
+    height: 6rem;
+}
+.myForm [type=submit] {
+    background-color: #18465a;
+    padding: 1rem 3rem;
+    color: #eff1ee;
+    margin: 0 1rem;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    border: 1px solid #18465a;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+/*footer stuff here*/
+footer {
+    background-color: #18465a;
+    text-align: center;
+    color: #eff1ee;
+    padding: .5rem;
+    font-size: .9rem;
+}
+footer a {
+    color: #9ec1d7;
+}
+footer a:hover {
+    color: white;
+}
+header, nav, main, footer {
+    max-width: 90rem;
+    margin: 0 auto;
+}
